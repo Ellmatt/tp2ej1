@@ -11,8 +11,8 @@ export const listarTarea = async (req, res) => {
 
 export const obtenerTarea = async (req, res) => {
   try {
-    console.log(req.params.id);
-    const tareaBuscada = await Tarea.findByID(req.params.id);
+    // console.log(req.body);
+    const tareaBuscada = await Tarea.findById(req.params.id);
     res.status(201).json(tareaBuscada);
   } catch (error) {
     console.log(error);
