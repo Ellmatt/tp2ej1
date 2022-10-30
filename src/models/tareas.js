@@ -1,12 +1,12 @@
 import mongoose, { Schema } from "mongoose";
 
-const productoSchema = new Schema({
-  nombreProducto: {
+const tareaSchema = new Schema({
+  nombreTarea: {
     type: String,
     required: true,
     unique: true,
     minLength: 2,
-    maxLength: 50,
+    maxLength: 500,
   },
   precio: {
     type: Number,
@@ -24,5 +24,5 @@ const productoSchema = new Schema({
   },
 });
 
-const Producto = mongoose.model("producto", productoSchema);
-export default Producto;
+const Tarea = mongoose.model("tarea", tareaSchema);
+export default Tarea;
