@@ -1,5 +1,6 @@
 import { Router } from "express";
 import {
+    crearProducto,
   listarProductos,
   obetenrProducto,
 } from "../controllers/productos.controllers";
@@ -8,7 +9,7 @@ const router = Router();
 
 router.route("/productos")
 .get(listarProductos) 
-.post();
+.post(crearProducto);
 
 router.route("prodtictos/:id")
 .get(obetenrProducto)
