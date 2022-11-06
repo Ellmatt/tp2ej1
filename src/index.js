@@ -7,7 +7,7 @@ import "./database";
 
 const app = express();
 
-app.set("puerto", process.env.PORT || 4002);
+app.set("puerto", process.env.PORT || 4000);
 
 app.listen(app.get("puerto"), () => {
   console.log("Estoy en el puerto " + app.get("puerto"));

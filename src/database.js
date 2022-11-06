@@ -8,13 +8,3 @@ connection.once("open", () => {
   console.log("BD conectada");
 });
 
-// OPCION 2
-// const connetDB = async () => {
-//   try {
-//     await mongoose.connet(url);
-//     console.log("BD conectada");
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-// connetDB()

@@ -24,7 +24,7 @@ export const obtenerTarea = async (req, res) => {
 
 export const crearTarea = async (req, res) => {
   try {
-    console.log(req.body);
+ 
     const tareaNueva = new Tarea(req.body);
     await tareaNueva.save();
     res.status(201).json({
@@ -34,7 +34,7 @@ export const crearTarea = async (req, res) => {
     res.status(400).json({
       mensaje: "Error al intentar agregar la tarea",
     });
-    console.log(error);
+ 
   }
 };
 
@@ -43,11 +43,11 @@ export const editarTarea = async (req, res) => {
     await Tarea.findByIdAndUpdate(req.params.id, req.body);
 
     res.status(200).json({
-      mensaje: "La se dito correctamente",
+      mensaje: "La Tarea se dito correctamente",
     });
   } catch (error) {
     res.status(404).json({
-      mensaje: "Error La no pudo editarse",
+      mensaje: "Error La Tarea no pudo editarse",
     });
   }
 };
